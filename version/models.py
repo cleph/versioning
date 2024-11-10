@@ -14,7 +14,7 @@ class Platform(models.Model):
     title = models.CharField(max_length=100, verbose_name=_("Title"))
     url = models.URLField(verbose_name=_("URL"))
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, verbose_name=_("Status"))
-    version = models.BigIntegerField(verbose_name=_("Version"))
+    version = models.CharField(max_length=255,verbose_name=_("Version"))
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("Created At"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("Updated At"))
 
